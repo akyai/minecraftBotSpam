@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <style>
+      
+body, html {
+    height: 100%;
+  }
+  body {
+    font-family: 'Open Sans';
+    font-weight: 100;
+    display: flex;
+    overflow: hidden;
+   background-color: rgb(181, 198, 212);
+  }
+
+  .attack-form {
+    box-shadow: 10px 8px 5px rgb(47, 46, 46);
+    background: #111;
+    
+    min-height: 10rem;
+    margin: auto;
+    max-width: 50%;
+    padding: .5rem;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .box {
+    background: transparent;
+    border: 0 solid;
+    border-bottom: 1px solid rgba(white, .5);
+    color: white;
+    display: block;
+    border: 100px;
+    border-color: black;
+    margin: 2rem;
+    padding: .5rem;
+    transition: 250ms background ease-in;
+    width: calc(100% - 5rem);
+  
+    &:focus {
+      background: white;
+      color: black;
+      transition: 250ms background ease-in;
+    }
+  }
+  
+  .prefix-submit {
+    color: blue;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    display: block;
+    margin: 1rem auto;
+    min-width: 1px;
+    padding: .25rem;
+
+  }
+  
+  
+  
+  
+  .form-control {
+    color: rgb(180, 150, 150);
+    font-family: system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 3em auto;
+    gap: 0.5em;
+  }
+
+ 
+    a{
+      
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
+      color: #111;
+      display:grid
+
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>    </head>
+  <body>
+    <a href="https://twitter.com/akyai_"   class="bi bi-twitter"></a>
+    <a href='https://discord.gg/7zxz9bqtnn' class='bi bi-discord'></a>
+    <a href='https://github.com/akyai' class='bi bi-github'></a>
+    <a href="https://www.instagram.com/akyaiai/" class="bi bi-instagram"></a>
+    <form class="attack-form" action="/attack-update" method="POST">
+    <input  class="box" oninvalid="this.setCustomValidiy('Please input something')" id="ipp" name="ipp" autofocus="true" required="true" placeholder="Server Ip (hypixel.net)" />
+    <input  class="box" oninvalid="this.setCustomValidity('Please input something')" id="prefixusername" name="prefixusername" required="true" placeholder="Prefix Username bot" />
+    <input  class="box"  id="spammessage" name="spammessage" placeholder="Spam message" />
+    <label class="form-control"><input type="checkbox" value="true" name="checked" checked />Spam</label>
+    <label class="form-control"><input type="checkbox" value="true" name="checkedspam" checked />Spam logs</label>
+    <input type="submit" value="Startattack" class="prefix-submit"/>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      </script>
+  </body>
+</html>

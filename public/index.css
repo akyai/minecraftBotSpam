@@ -1,0 +1,95 @@
+
+body, html {
+    height: 100%;
+  }
+  body {
+    font-family: 'Open Sans';
+    font-weight: 100;
+    display: flex;
+    overflow: hidden;
+   background-color: rgb(181, 198, 212);
+  }
+
+  .attack-form {
+    box-shadow: 10px 8px 5px rgb(47, 46, 46);
+    background: #111;
+    
+    min-height: 10rem;
+    margin: auto;
+    max-width: 50%;
+    padding: .5rem;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .box {
+    background: transparent;
+    border: 0 solid;
+    border-bottom: 1px solid rgba(white, .5);
+    color: white;
+    display: block;
+    border: 100px;
+    border-color: black;
+    margin: 2rem;
+    padding: .5rem;
+    transition: 250ms background ease-in;
+    width: calc(100% - 5rem);
+  
+    &:focus {
+      background: white;
+      color: black;
+      transition: 250ms background ease-in;
+    }
+  }
+  
+  .prefix-submit {
+    color: blue;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    display: block;
+    margin: 1rem auto;
+    min-width: 1px;
+    padding: .25rem;
+
+  }
+  
+  
+  
+  
+  .form-control {
+    color: rgb(180, 150, 150);
+    font-family: system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 3em auto;
+    gap: 0.5em;
+  }
+
+ 
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #ffffff;
+  color: rgb(255, 0, 0);
+}
+.fa-discord {
+  background: #ffffff;
+  color: rgb(255, 0, 0);
+}
